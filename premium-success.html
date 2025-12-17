@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VizeRadar Premium Aktif 🎉</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="content card">
+      <h1>🎉 Tebrikler!</h1>
+      <p>Ödemen alındı. Premium hesabın aktif ediliyor...</p>
+
+      <div style="margin-top:1rem">
+        <a href="/" class="btn primary">Ana Sayfaya Dön</a>
+      </div>
+      <script>
+      // Basit MVP mantığı: dönüş URL'sine gelen HERKES'i premium yapıyoruz.
+      localStorage.setItem("vizeradar_premium", "1");
+      
+      // Küçük bir gecikme ile ana sayfaya dön
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 1500);
+      </script>
+    </section>
+  </main>
+</body>
+</html>

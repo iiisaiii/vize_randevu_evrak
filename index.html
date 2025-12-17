@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VizeRadar – Basit çözüm, net adımlar</title>
+  <meta name="description" content="Schengen ve diğer vizeler için evrak checklist’i, hatırlatıcılar ve randevu takip. İlk 5 adım ücretsiz.">
+  <link rel="canonical" href="https://www.vizeradar.com/">
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div id="brandLink" class="brand" style="cursor:pointer">VizeRadar <span class="badge">MVP</span></div>
+    <div class="actions">
+      <select id="modelSelect" class="select"></select>
+      <button id="resetProgress" class="btn outline small">İlerlemeyi Sıfırla</button>
+      <a id="premiumBtn" class="btn primary small" href="/premium.html">Premium'a Geç</a>
+      <button id="loginBtn" class="btn small outline" style="margin-left:.5rem">Giriş / Kayıt</button>
+    </div>
+  </header>
+
+  
+  <!-- Home Landing -->
+  <section id="homeLanding" class="home-landing">
+    <div class="home-inner">
+      <!-- Sol tarafta metin -->
+      <div class="home-copy">
+        <div class="eyebrow">Vize sürecini tek ekranda yönet</div>
+        <h1>Randevuyu kaçırma, evrakı eksiksiz hazırla, tek ekrandan takip et.</h1>
+        <p class="lead">
+          Schengen ve diğer vizeler için evrak checklist’i, hatırlatıcılar ve randevu takip. İlk 5 adım ücretsiz.
+        </p>
+
+        <div class="home-cta-row">
+          <button id="exploreModelsBtn" class="btn primary big">
+            Ücretsiz Dene
+          </button>
+          <button id="openAuthFromHome" class="btn outline">
+            Giriş / Kayıt
+          </button>
+        </div>
+
+        <p class="muted small">
+          İlk <strong>5 adım herkese açık</strong>. Alarm ve ileri takip Premium’da.
+        </p>
+
+        <div class="home-tags">
+          <span class="tag">Schengen</span>
+          <span class="tag">iDATA</span>
+          <span class="tag">VFS</span>
+          <span class="tag">Checklist</span>
+          <span class="tag">Hatırlatıcı</span>
+          <span class="tag">Sigorta</span>
+        </div>
+      </div>
+
+      <!-- Sağ tarafta mini “preview” -->
+      <div class="home-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="preview-title">VizeRadar — Demo</span>
+          </div>
+          <ul class="preview-steps">
+            <li class="ok">1. Ülke ve şehir seç</li>
+            <li class="ok">2. Evrak checklist’ini oluştur</li>
+            <li class="ok">3. Belgeleri yükle/sakla</li>
+            <li class="ok">4. Zaman çizelgesi çıkar</li>
+            <li class="ok">5. Kontrol günlerini ayarla</li>
+            <li class="locked">6. Randevu alarmı (Premium)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h3 id="sidebarTitle">Adımlar</h3>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+      <ul id="stepsList" class="steps"></ul>
+    </aside>
+
+    <section class="content">
+      <div id="stepView" class="card">
+      </div>
+    </section>
+
+    <aside class="rightbar">
+      <div class="card">
+        <h3>Kaynaklar</h3>
+        <ul id="linksList" class="links"></ul>
+      </div>
+      <div class="card info">
+        <h4>Ücretsiz</h4>
+        <p>İlk 5 adım herkese açık. Alarm ve ileri takip Premium’da.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="foot">© 2025 VizeRadar — Takip sende, stres bizde kalsın.</footer>
+
+  <!-- Auth modal -->
+  <div id="authModal" class="modal" style="display:none">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button id="closeAuth" class="modal-close" aria-label="Kapat">×</button>
+      <h3 id="authTitle">Giriş / Kayıt</h3>
+      <div id="authBody">
+        <form id="authForm" autocomplete="off">
+          <div class="form-row">
+            <label for="authEmail">E-posta</label><br/>
+            <input id="authEmail" name="email" type="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-row" style="margin-top:.5rem">
+            <label for="authPassword">Parola</label><br/>
+            <input id="authPassword" name="password" type="password" required minlength="6" placeholder="En az 6 karakter" />
+          </div>
+          <div style="margin-top:.75rem; display:flex; gap:.5rem; align-items:center">
+            <button id="authSignUp" type="button" class="btn small">Kayıt Ol</button>
+            <button id="authSignIn" type="button" class="btn primary small">Giriş Yap</button>
+            <button id="authSignOut" type="button" class="btn outline small" style="margin-left:auto">Çıkış</button>
+          </div>
+          <div id="authStatus" style="margin-top:.75rem;color:#333;font-size:.9rem"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase UMD -->
+  <script src="/public/vendor/supabase.min.js"></script>
+  <!-- App script -->
+  <script src="app.js"></script>
+</body>
+</html>
