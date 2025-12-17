@@ -1,0 +1,62 @@
+{
+  "model": "Schengen",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Nereye başvuruyorsun?",
+      "description": "Ülke ve şehir seç; evrak listesi buna göre şekillenir.",
+      "options": [
+        "Almanya",
+        "Hollanda",
+        "Fransa",
+        "İtalya"
+      ],
+      "links": []
+    },
+    {
+      "id": 2,
+      "title": "Seyahat planı",
+      "description": "Gidiş-dönüş tarihleri, kalış süresi ve şehirler.",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 3,
+      "title": "Evrak checklist’i",
+      "description": "Pasaport, foto, banka dökümü, SGK, dilekçe vb. listeni tamamla.",
+      "options": [
+        "Tamam"
+      ],
+      "links": []
+    },
+    {
+      "id": 4,
+      "title": "Belge kasası",
+      "description": "PDF/foto yükleyip tek yerde sakla (MVP: local).",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 5,
+      "title": "Zaman çizelgesi",
+      "description": "Bugün → randevu → uçuş. Hangi gün ne yapılacak?",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 6,
+      "title": "Randevu alarmı (Premium)",
+      "description": "Kontrol hatırlatması + öncelikli alarm (Premium).",
+      "options": [
+        "Aç"
+      ],
+      "links": []
+    }
+  ]
+}

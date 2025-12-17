@@ -1,0 +1,60 @@
+{
+  "model": "UK",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Başvuru tipi",
+      "description": "Turist mi, ziyaret mi?",
+      "options": [
+        "Turist",
+        "Ziyaret"
+      ],
+      "links": []
+    },
+    {
+      "id": 2,
+      "title": "Hesap/gelir",
+      "description": "Finansal kanıtları toparla.",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 3,
+      "title": "Evrak checklist’i",
+      "description": "UK için temel evrak listesi.",
+      "options": [
+        "Tamam"
+      ],
+      "links": []
+    },
+    {
+      "id": 4,
+      "title": "Zaman çizelgesi",
+      "description": "Biyometri ve teslim adımları.",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 5,
+      "title": "Kontrol listesi",
+      "description": "Son kontrol ve kopyalar.",
+      "options": [
+        "Devam"
+      ],
+      "links": []
+    },
+    {
+      "id": 6,
+      "title": "Alarm (Premium)",
+      "description": "Takip/hatırlatma.",
+      "options": [
+        "Aç"
+      ],
+      "links": []
+    }
+  ]
+}
